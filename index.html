@@ -78,16 +78,34 @@
       margin: 2.33em 0
     }
 
-    #red-content h2 {
-      color: palevioletred;
+    .lbl-toggle,
+    .subtitle {
+      --accent-on-page: var(--accent)
     }
 
-    #green-content :is(h2, h3, h4) {
-      color: darkcyan;
+    #red-toggle,
+    #red-content {
+      --accent: palevioletred
     }
 
-    #blue-content h2 {
-      color: darkslateblue;
+    #green-toggle,
+    #green-content {
+      --accent: darkcyan
+    }
+
+    #blue-toggle,
+    #blue-content {
+      --accent: darkslateblue;
+      --accent-on-page: #fafafa
+    }
+
+    #clear-toggle,
+    #white-toggle {
+      --accent: #fff
+    }
+
+    .subtitle :is(h2, h3, h4) {
+      color: var(--accent)
     }
 
     li,
@@ -99,52 +117,14 @@
       margin-bottom: 2px
     }
 
-    #green-toggle {
-      border-color: darkcyan;
-      border-style: solid;
-      border-width: 5px;
+    summary {
+      border: 5px solid var(--accent)
     }
 
-    #red-toggle {
-      border-color: palevioletred;
-      border-style: solid;
-      border-width: 5px;
-    }
-
-    #blue-toggle {
-      border-color: darkslateblue;
-      border-style: solid;
-      border-width: 5px;
-    }
-
-    #red-toggle:hover {
-      background: palevioletred;
-      transition: color .2s ease-out
-    }
-
-    #green-toggle:hover {
-      background: darkcyan;
-      transition: color .2s ease-out
-    }
-
-    #blue-toggle:hover {
-      background: darkslateblue;
-      transition: color .2s ease-out
-    }
-
-    [open]>#red-toggle {
-      background: palevioletred;
-      transition: color .5s ease-out
-    }
-
-    [open]>#green-toggle {
-      background: darkcyan;
-      transition: color .2s ease-out
-    }
-
-    [open]>#blue-toggle {
-      background: darkslateblue;
-      transition: color .2s ease-out
+    summary:hover,
+    [open]>summary {
+      background: var(--accent);
+      transition: none
     }
 
     /*Mobile layout */
@@ -237,24 +217,6 @@
       color: inherit
     }
 
-    article,
-    footer,
-    header {
-      opacity: 0;
-      animation: fadein 4s;
-      animation-fill-mode: forwards
-    }
-
-    @keyframes fadein {
-      from {
-        opacity: 0
-      }
-
-      to {
-        opacity: 1
-      }
-    }
-
     .wrap-collapsible {
       padding: .5em
     }
@@ -267,7 +229,12 @@
       cursor: pointer;
       border-radius: 7px;
       list-style: none;
-      transition: all 1s ease-out
+      transition: background-color 1s ease-out
+    }
+
+    .lbl-toggle:focus-visible {
+      outline: 3px solid var(--accent-on-page);
+      outline-offset: 3px
     }
 
     summary::-webkit-details-marker {
@@ -275,21 +242,19 @@
     }
 
     #white-toggle {
-      background: #fff;
+      background: var(--accent);
       color: #000;
       transition: color .2s ease-out
     }
 
     #clear-toggle {
-      border-style: solid;
-      border-color: #fff;
+      border: 3px solid var(--accent);
       transition: color .2s ease-out
     }
 
     details::details-content {
       max-height: 0;
-      overflow: hidden;
-      transition: max-height .75s ease-in-out, content-visibility .75s allow-discrete
+      overflow: hidden
     }
 
     details[open]::details-content {
@@ -297,27 +262,42 @@
     }
 
     #external-squiggle g path {
-      fill-opacity: 0;
       stroke-width: 1.2;
-      stroke-dasharray: 800;
-      stroke-dashoffset: 800;
-      animation: DASH3 3s ease-in-out 0s forwards
+      stroke-dasharray: 800
     }
 
-    @keyframes DASH3 {
-      0% {
-        stroke-dashoffset: 800;
-        fill-opacity: 0
+    @media (prefers-reduced-motion: no-preference) {
+
+      article,
+      footer,
+      header {
+        animation: fadein 4s
       }
 
-      80% {
-        stroke-dashoffset: 0;
-        fill-opacity: .75
+      details::details-content {
+        transition: max-height .75s ease-in-out, content-visibility .75s allow-discrete
       }
 
-      100% {
-        stroke-dashoffset: 0;
-        fill-opacity: 1
+      #external-squiggle g path {
+        animation: DASH3 3s ease-in-out
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0
+        }
+      }
+
+      @keyframes DASH3 {
+        0% {
+          stroke-dashoffset: 800;
+          fill-opacity: 0
+        }
+
+        80% {
+          stroke-dashoffset: 0;
+          fill-opacity: .75
+        }
       }
     }
   </style>
