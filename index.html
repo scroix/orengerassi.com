@@ -48,6 +48,10 @@
       src: url(fonts/open-sans-latin-400.woff2) format("woff2")
     }
 
+    :root {
+      --ease-out: cubic-bezier(.16, 1, .3, 1)
+    }
+
     body {
       background: #121212;
       color: #fafafa;
@@ -277,12 +281,17 @@
     }
 
     details::details-content {
-      max-height: 0;
+      display: grid;
+      grid-template-rows: 0fr;
       overflow: hidden
     }
 
     details[open]::details-content {
-      max-height: 15000px
+      grid-template-rows: 1fr
+    }
+
+    .content-inner {
+      min-height: 0
     }
 
     #external-squiggle g path {
@@ -299,7 +308,11 @@
       }
 
       details::details-content {
-        transition: max-height .75s ease-in-out, content-visibility .75s allow-discrete
+        transition: grid-template-rows .2s var(--ease-out), content-visibility .2s allow-discrete
+      }
+
+      details[open]::details-content {
+        transition-duration: .3s
       }
 
       #external-squiggle g path {
