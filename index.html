@@ -147,8 +147,7 @@
     }
 
     [open]>summary {
-      background: var(--accent);
-      transition: none
+      background: var(--accent)
     }
 
     /*Mobile layout */
@@ -252,7 +251,7 @@
       cursor: pointer;
       border-radius: 7px;
       list-style: none;
-      transition: background-color 1s ease-out
+      transition: background-color .15s var(--ease-out), color .15s var(--ease-out), scale .12s var(--ease-out)
     }
 
     .lbl-toggle:focus-visible {
@@ -270,14 +269,12 @@
     }
 
     #clear-toggle {
-      border: 3px solid var(--accent);
-      transition: none
+      border: 3px solid var(--accent)
     }
 
     @media (hover: hover) {
       summary:hover {
-        background: var(--accent);
-        transition: none
+        background: var(--accent)
       }
 
       #clear-toggle:hover {
@@ -310,7 +307,19 @@
       article,
       footer,
       header {
-        animation: fadein 4s
+        animation: rise .9s var(--ease-out) backwards
+      }
+
+      article {
+        animation-delay: .1s
+      }
+
+      footer {
+        animation-delay: .2s
+      }
+
+      .lbl-toggle:active {
+        scale: .98
       }
 
       details::details-content {
@@ -325,9 +334,10 @@
         animation: DASH3 3s ease-in-out
       }
 
-      @keyframes fadein {
+      @keyframes rise {
         from {
-          opacity: 0
+          opacity: 0;
+          translate: 0 8px
         }
       }
 
