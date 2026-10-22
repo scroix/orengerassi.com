@@ -146,7 +146,6 @@
       color: #fff
     }
 
-    summary:hover,
     [open]>summary {
       background: var(--accent);
       transition: none
@@ -275,9 +274,16 @@
       transition: none
     }
 
-    #clear-toggle:hover {
-      background: var(--accent);
-      color: #000
+    @media (hover: hover) {
+      summary:hover {
+        background: var(--accent);
+        transition: none
+      }
+
+      #clear-toggle:hover {
+        background: var(--accent);
+        color: #000
+      }
     }
 
     details::details-content {
