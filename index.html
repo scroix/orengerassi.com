@@ -89,10 +89,6 @@
       margin: 5px 0 1.33em
     }
 
-    .subtitle>p {
-      line-height: normal
-    }
-
     .subtitle .note {
       font-size: .67em;
       margin: 2.33em 0
@@ -125,7 +121,11 @@
     }
 
     .subtitle :is(h2, h3, h4) {
-      color: var(--accent)
+      color: var(--accent-on-page)
+    }
+
+    .content-inner {
+      max-width: 37rem
     }
 
     li,
@@ -138,7 +138,8 @@
     }
 
     summary {
-      border: 5px solid var(--accent)
+      border: 5px solid var(--accent);
+      color: #fff
     }
 
     summary:hover,
@@ -183,7 +184,7 @@
       }
 
       .lbl-toggle {
-        font-size: 1rem
+        font-size: 1.2rem
       }
 
       ul {
@@ -228,7 +229,7 @@
       }
 
       .lbl-toggle {
-        font-size: 1.6rem !important
+        font-size: 1.6rem
       }
     }
 
@@ -244,7 +245,6 @@
     .lbl-toggle {
       display: block;
       font-weight: 700;
-      font-size: 1rem;
       padding: 1rem;
       cursor: pointer;
       border-radius: 7px;
@@ -263,13 +263,17 @@
 
     #white-toggle {
       background: var(--accent);
-      color: #000;
-      transition: color .2s ease-out
+      color: #000
     }
 
     #clear-toggle {
       border: 3px solid var(--accent);
-      transition: color .2s ease-out
+      transition: none
+    }
+
+    #clear-toggle:hover {
+      background: var(--accent);
+      color: #000
     }
 
     details::details-content {
@@ -369,28 +373,22 @@
         <div id="red-content" class="content-inner subtitle">
           <h2>Who am I?</h2>
           <p>A smaller and less sophisticated model of me came into existence in 1985. Despite being born in Israel, a
-            war inflicted nation in the Middle East, I was hugged, fed and therefore survived.<br><br>
-
-            I grew up in suburban Tel Aviv, where there are no camels at all, just a lot of stray cats. The cats
+            war inflicted nation in the Middle East, I was hugged, fed and therefore survived.</p>
+          <p>I grew up in suburban Tel Aviv, where there are no camels at all, just a lot of stray cats. The cats
             adjusted well to the hot coastal climate with sun, sandy beaches, and the endless supply of rubbish
-            contributing to a prosperous and strong community.<br><br>
-
-            The institutions facilitating the expansion of the cat habitat had considerable control over my life too,
+            contributing to a prosperous and strong community.</p>
+          <p>The institutions facilitating the expansion of the cat habitat had considerable control over my life too,
             and I had varying degrees of success in resisting religious and nationalistic coercion. While my immediate
-            surrounding was relatively safe, around the fences it was dominated by trauma, suffering and loss.<br><br>
-
-            For comfort, I turned to music. Music was good way to make sense out of what at times seemed like an absurd
-            existence. It opened a door to a dialogue that transcended the technicalities of language.<br><br>
-
-            In the spring of 2008 I left my home town on good terms, with good memories and mental scars for life. The
-            destination: Melbourne, Australia, where I spent almost 13 years doing all sorts of stuff.<br><br>
-
-            In the end of 2020, I moved to lutruwita (Tasmania) with my partner. We lived on a farm for the better part
+            surrounding was relatively safe, around the fences it was dominated by trauma, suffering and loss.</p>
+          <p>For comfort, I turned to music. Music was good way to make sense out of what at times seemed like an absurd
+            existence. It opened a door to a dialogue that transcended the technicalities of language.</p>
+          <p>In the spring of 2008 I left my home town on good terms, with good memories and mental scars for life. The
+            destination: Melbourne, Australia, where I spent almost 13 years doing all sorts of stuff.</p>
+          <p>In the end of 2020, I moved to lutruwita (Tasmania) with my partner. We lived on a farm for the better part
             of the year and have now settled in nipaluna (Hobart), by the foot of kunanyi (Mt Wellington), where we
             often climb and hike. Polite wallabies replaced the angry cats, my gardening skills are improving, and we've
             recently adopted a wise, retired old cat who now manages our household operations from the safety of the
-            indoors — protecting the local wildlife and herself from getting too excited.<br><br>
-          </p>
+            indoors — protecting the local wildlife and herself from getting too excited.</p>
         </div>
       </details>
       <details class="wrap-collapsible">
@@ -399,8 +397,8 @@
           <h2>What am I doing?</h2>
           <p>I spend my time navigating the seam between ideas and the systems that make them possible. Sometimes
             that means designing a production workflow, sometimes it means wiring a room, sometimes it means listening
-            - to artists, to students, to communities, to a stubborn hum in a cable run.<br><br>
-            I work across technical production, project coordination, and large-scale logistics, helping cultural,
+            - to artists, to students, to communities, to a stubborn hum in a cable run.</p>
+          <p>I work across technical production, project coordination, and large-scale logistics, helping cultural,
             educational, and media organisations bring complicated things to life in a way that feels coherent, safe,
             and achievable. My background in governance and my ongoing life in music and sound give me a useful
             vantage point: close enough to the art to care about the details, far enough to see the structure that
@@ -477,7 +475,8 @@
               <h4>Human Resources Planning Officer – IDF (Air Force)</h4>
               <p>2003-2006 <br>Coordinated rotational duties for thousands of Air Force personnel across all ranks.
                 Managed complex rostering requirements by negotiating with security, medical, and operational teams to
-                ensure fair, efficient, and organisationally compliant staffing across units. <br><br> Context note:
+                ensure fair, efficient, and organisationally compliant staffing across units.</p>
+              <p>Context note:
                 This was part of mandatory service. While the role taught me a great deal about coordination,
                 negotiation, and large‑scale operational systems, I do not romanticise the military context or regard it
                 as a normal expectation for an eighteen‑year‑old. I was fortunate to serve in an office role, but many
@@ -567,14 +566,10 @@
 
           <h3 class="major">Writing and Music </h3>
 
-          <p>See link to Blog below
-            <br>
-          </p>
+          <p>See link to Blog below</p>
           <h3 class="major">Gardening and Cooking </h3>
 
-          <p>Weekly hummus batches, chilli paste. Summer planting of beans, tomatoes, chillies and more!
-            <br>
-          </p><br>
+          <p>Weekly hummus batches, chilli paste. Summer planting of beans, tomatoes, chillies and more!</p>
         </div>
       </details>
       <details class="wrap-collapsible">
@@ -584,7 +579,8 @@
           <p>The Answer to the Question of Life, the Universe and Everything Else<br>I don't know. 42 is just as likely
             an answer as promoting the values of love and friendship, paying rent or being recognised. I ask myself
             existential questions like this all the time and I am coming up with all sorts of answers, some of which I
-            publish in my blog.<br><br>If I had to sum it up, I would rather not. The question of why I do things has a
+            publish in my blog.</p>
+          <p>If I had to sum it up, I would rather not. The question of why I do things has a
             history in the philosophical valley between Rousseau and Hobbes, nature and nurture, hope and despair, joy
             and anger, reflection, documentation, curiosity, ignorance, desire, love and the absence of a better choice.
           </p>
