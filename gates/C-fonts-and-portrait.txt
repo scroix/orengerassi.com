@@ -1,0 +1,34 @@
+$ node diff.mjs shots/B shots/C-fonts   (self-hosted fonts vs Google Fonts)
+1280-collapsed.png	1280x800	exact-diff-px=0	perceptual-diff-px=0
+1280-what.png	1280x4879	exact-diff-px=0	perceptual-diff-px=0
+1280-who.png	1280x1346	exact-diff-px=0	perceptual-diff-px=0
+1280-why.png	1280x1026	exact-diff-px=0	perceptual-diff-px=0
+390-collapsed.png	390x962	exact-diff-px=0	perceptual-diff-px=0
+390-what.png	390x6509	exact-diff-px=0	perceptual-diff-px=0
+390-who.png	390x1810	exact-diff-px=0	perceptual-diff-px=0
+390-why.png	390x1330	exact-diff-px=0	perceptual-diff-px=0
+
+$ node outside-svg.mjs   (path rounding: diff pixels outside the portrait's box)
+390-collapsed.png	svg box x45-345 y110-370 (300x260)	diff inside=1109 outside=0
+390-who.png	svg box x45-345 y110-370 (300x260)	diff inside=1111 outside=0
+390-what.png	svg box x45-345 y110-370 (300x260)	diff inside=1109 outside=0
+390-why.png	svg box x45-345 y110-370 (300x260)	diff inside=1110 outside=0
+1280-collapsed.png	svg box x845-1146 y125-385 (301x260)	diff inside=1107 outside=0
+1280-who.png	svg box x845-1146 y125-385 (301x260)	diff inside=1108 outside=0
+1280-what.png	svg box x845-1146 y125-385 (301x260)	diff inside=1109 outside=0
+1280-why.png	svg box x845-1146 y125-385 (301x260)	diff inside=1107 outside=0
+outside total: 0
+
+$ node final-frame.mjs   (final drawn frame, base commit vs rounded paths)
+300px@1x	300x260	exact=1084	perceptual=232	max channel delta=119
+  delta histogram (max channel delta: pixels): 0:76916  1-8:223  9-32:0  33-64:840  65-128:21  129-255:0
+  worst 40px cell (2,5) has 25 perceptual px; crop device px (60,180) 80x80 zoom 6x -> portrait/worst-300px@1x.png  [panels: old | new | delta x4]
+300px@2x	600x520	exact=4113	perceptual=343	max channel delta=178
+  delta histogram (max channel delta: pixels): 0:307887  1-8:1008  9-32:0  33-64:2904  65-128:197  129-255:4
+  worst 40px cell (2,5) has 43 perceptual px; crop device px (120,360) 160x160 zoom 3x -> portrait/worst-300px@2x.png  [panels: old | new | delta x4]
+300px@3x	900x780	exact=8811	perceptual=337	max channel delta=237
+  delta histogram (max channel delta: pixels): 0:693189  1-8:2270  9-32:0  33-64:5919  65-128:600  129-255:22
+  worst 40px cell (6,1) has 32 perceptual px; crop device px (660,60) 240x240 zoom 2x -> portrait/worst-300px@3x.png  [panels: old | new | delta x4]
+666px@2x	1332x1150	exact=18269	perceptual=250	max channel delta=237
+  delta histogram (max channel delta: pixels): 0:1513531  1-8:4663  9-32:0  33-64:11694  65-128:1837  129-255:75
+  worst 40px cell (3,2) has 25 perceptual px; crop device px (200,120) 160x160 zoom 3x -> portrait/worst-666px@2x.png  [panels: old | new | delta x4]

@@ -1,0 +1,63 @@
+D gate (bound decided by the parent, replaces exact-0 for D only)
+- perceptual diff (pixelmatch 0.1) = 0 on all 8 shots, default and --reduced, vs evidence/C/shots
+- exact diffs only in header/article/footer text and list-bullet anti-aliasing; max channel delta 2 everywhere except 24 bullet-corner pixels in 1280-what at 18
+- cause: old post-fade compositor layer. Control: will-change: opacity on article/footer/header gives exact 0 (evidence/D/vars/var1*, var1-reduced.txt). will-change is not added.
+
+== node bound-check.mjs evidence/C/shots evidence/D/shots
+1280-collapsed.png	exact=3590	perceptual=0	max-delta=2	px-delta>2=0
+1280-what.png	exact=117668	perceptual=0	max-delta=18	px-delta>2=24 bbox 164,742-169,1144
+1280-who.png	exact=26492	perceptual=0	max-delta=2	px-delta>2=0
+1280-why.png	exact=12660	perceptual=0	max-delta=2	px-delta>2=0
+390-collapsed.png	exact=2961	perceptual=0	max-delta=2	px-delta>2=0
+390-what.png	exact=117599	perceptual=0	max-delta=2	px-delta>2=0
+390-who.png	exact=25963	perceptual=0	max-delta=2	px-delta>2=0
+390-why.png	exact=12275	perceptual=0	max-delta=2	px-delta>2=0
+
+== node bound-check.mjs evidence/C/shots evidence/D/shots-reduced
+1280-collapsed.png	exact=3590	perceptual=0	max-delta=2	px-delta>2=0
+1280-what.png	exact=117668	perceptual=0	max-delta=18	px-delta>2=24 bbox 164,742-169,1144
+1280-who.png	exact=26492	perceptual=0	max-delta=2	px-delta>2=0
+1280-why.png	exact=12660	perceptual=0	max-delta=2	px-delta>2=0
+390-collapsed.png	exact=2961	perceptual=0	max-delta=2	px-delta>2=0
+390-what.png	exact=117599	perceptual=0	max-delta=2	px-delta>2=0
+390-who.png	exact=25963	perceptual=0	max-delta=2	px-delta>2=0
+390-why.png	exact=12275	perceptual=0	max-delta=2	px-delta>2=0
+
+== node ../harness/diff.mjs evidence/C/shots evidence/D/shots (exit 1 expected, exact > 0)
+1280-collapsed.png	1280x800	exact-diff-px=3590	perceptual-diff-px=0
+1280-what.png	1280x4879	exact-diff-px=117668	perceptual-diff-px=0
+1280-who.png	1280x1346	exact-diff-px=26492	perceptual-diff-px=0
+1280-why.png	1280x1026	exact-diff-px=12660	perceptual-diff-px=0
+390-collapsed.png	390x962	exact-diff-px=2961	perceptual-diff-px=0
+390-what.png	390x6509	exact-diff-px=117599	perceptual-diff-px=0
+390-who.png	390x1810	exact-diff-px=25963	perceptual-diff-px=0
+390-why.png	390x1330	exact-diff-px=12275	perceptual-diff-px=0
+
+== same with --reduced shots
+1280-collapsed.png	1280x800	exact-diff-px=3590	perceptual-diff-px=0
+1280-what.png	1280x4879	exact-diff-px=117668	perceptual-diff-px=0
+1280-who.png	1280x1346	exact-diff-px=26492	perceptual-diff-px=0
+1280-why.png	1280x1026	exact-diff-px=12660	perceptual-diff-px=0
+390-collapsed.png	390x962	exact-diff-px=2961	perceptual-diff-px=0
+390-what.png	390x6509	exact-diff-px=117599	perceptual-diff-px=0
+390-who.png	390x1810	exact-diff-px=25963	perceptual-diff-px=0
+390-why.png	390x1330	exact-diff-px=12275	perceptual-diff-px=0
+
+== motion-check.mjs
+reducedMotion=reduce: getAnimations().length after load = 0, 100ms after opening Who? = 0, ::details-content max-height = 15000px
+reducedMotion=no-preference: getAnimations().length after load = 17, 100ms after opening Who? = 17, ::details-content max-height = 366.789px
+
+== textof
+diff empty
+
+== focus rings (Why ring is #fafafa after the 1.4.11 fix)
+390	who	#red-toggle	focus-visible=true	3px solid rgb(219, 112, 147) offset 3px	358x62
+390	what	#green-toggle	focus-visible=true	3px solid rgb(0, 139, 139) offset 3px	358x62
+390	why	#blue-toggle	focus-visible=true	3px solid rgb(250, 250, 250) offset 3px	358x62
+390	musings	#clear-toggle	focus-visible=true	3px solid rgb(255, 255, 255) offset 3px	358x58
+390	contact	#white-toggle	focus-visible=true	3px solid rgb(255, 255, 255) offset 3px	358x52
+1280	who	#red-toggle	focus-visible=true	3px solid rgb(219, 112, 147) offset 3px	660x74
+1280	what	#green-toggle	focus-visible=true	3px solid rgb(0, 139, 139) offset 3px	660x74
+1280	why	#blue-toggle	focus-visible=true	3px solid rgb(250, 250, 250) offset 3px	660x74
+1280	musings	#clear-toggle	focus-visible=true	3px solid rgb(255, 255, 255) offset 3px	660x70
+1280	contact	#white-toggle	focus-visible=true	3px solid rgb(255, 255, 255) offset 3px	660x64

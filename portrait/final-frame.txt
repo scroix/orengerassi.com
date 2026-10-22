@@ -1,0 +1,12 @@
+300px@1x	300x260	exact=1084	perceptual=232	max channel delta=119
+  delta histogram (max channel delta: pixels): 0:76916  1-8:223  9-32:0  33-64:840  65-128:21  129-255:0
+  worst 40px cell (2,5) has 25 perceptual px; crop device px (60,180) 80x80 zoom 6x -> /private/tmp/claude-501/-Users-scroix-sandbox-nous-orengerassi-com/492377c9-bd46-4265-834c-84d11a2e0445/scratchpad/owner/evidence/C/final-frame/worst-300px@1x.png  [panels: old | new | delta x4]
+300px@2x	600x520	exact=4113	perceptual=343	max channel delta=178
+  delta histogram (max channel delta: pixels): 0:307887  1-8:1008  9-32:0  33-64:2904  65-128:197  129-255:4
+  worst 40px cell (2,5) has 43 perceptual px; crop device px (120,360) 160x160 zoom 3x -> /private/tmp/claude-501/-Users-scroix-sandbox-nous-orengerassi-com/492377c9-bd46-4265-834c-84d11a2e0445/scratchpad/owner/evidence/C/final-frame/worst-300px@2x.png  [panels: old | new | delta x4]
+300px@3x	900x780	exact=8811	perceptual=337	max channel delta=237
+  delta histogram (max channel delta: pixels): 0:693189  1-8:2270  9-32:0  33-64:5919  65-128:600  129-255:22
+  worst 40px cell (6,1) has 32 perceptual px; crop device px (660,60) 240x240 zoom 2x -> /private/tmp/claude-501/-Users-scroix-sandbox-nous-orengerassi-com/492377c9-bd46-4265-834c-84d11a2e0445/scratchpad/owner/evidence/C/final-frame/worst-300px@3x.png  [panels: old | new | delta x4]
+666px@2x	1332x1150	exact=18269	perceptual=250	max channel delta=237
+  delta histogram (max channel delta: pixels): 0:1513531  1-8:4663  9-32:0  33-64:11694  65-128:1837  129-255:75
+  worst 40px cell (3,2) has 25 perceptual px; crop device px (200,120) 160x160 zoom 3x -> /private/tmp/claude-501/-Users-scroix-sandbox-nous-orengerassi-com/492377c9-bd46-4265-834c-84d11a2e0445/scratchpad/owner/evidence/C/final-frame/worst-666px@2x.png  [panels: old | new | delta x4]

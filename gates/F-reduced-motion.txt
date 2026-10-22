@@ -1,0 +1,9 @@
+$ node diff.mjs shots/after shots/after-reduced   (final tree: full motion vs prefers-reduced-motion, both settled)
+1280-collapsed.png	1280x800	exact-diff-px=0	perceptual-diff-px=0
+1280-what.png	1280x5220	exact-diff-px=0	perceptual-diff-px=0
+1280-who.png	1280x1480	exact-diff-px=0	perceptual-diff-px=0
+1280-why.png	1280x1059	exact-diff-px=0	perceptual-diff-px=0
+390-collapsed.png	390x982	exact-diff-px=0	perceptual-diff-px=0
+390-what.png	390x6624	exact-diff-px=0	perceptual-diff-px=0
+390-who.png	390x1948	exact-diff-px=0	perceptual-diff-px=0
+390-why.png	390x1407	exact-diff-px=0	perceptual-diff-px=0

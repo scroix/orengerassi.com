@@ -1,0 +1,27 @@
+== first view, nothing opened: before
+  35476 http://localhost:8101/
+   2205 https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap
+  15344 https://fonts.gstatic.com/s/sourcesanspro/v24/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2
+  13569 https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI
+   2005 http://localhost:8101/favicon.ico
+TOTAL requests=5 transfer=68599
+== first view, nothing opened: after
+  24745 http://localhost:8102/
+  14992 http://localhost:8102/fonts/source-sans-pro-latin-400.woff2
+  13632 http://localhost:8102/fonts/open-sans-latin-400.woff2
+   2005 http://localhost:8102/favicon.ico
+TOTAL requests=4 transfer=55374
+
+== every section opened: before
+  35476   88579 Document   http://localhost:8101/
+   2205    8859 Stylesheet https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap
+  15344   14812 Font       https://fonts.gstatic.com/s/sourcesanspro/v24/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7lujVj9w.woff2
+  13569   13452 Font       https://fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVIUwaEQbjA.w
+   2005   15406 Other      http://localhost:8101/favicon.ico
+TOTAL requests=5 transfer=68599 decoded=141108 hosts=localhost:8101,fonts.googleapis.com,fonts.gstatic.com
+== every section opened: after
+  24745   60779 Document   http://localhost:8102/
+  14992   14812 Font       http://localhost:8102/fonts/source-sans-pro-latin-400.woff2
+  13632   13452 Font       http://localhost:8102/fonts/open-sans-latin-400.woff2
+   2005   15406 Other      http://localhost:8102/favicon.ico
+TOTAL requests=4 transfer=55374 decoded=104449 hosts=localhost:8102

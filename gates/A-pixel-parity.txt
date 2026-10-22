@@ -1,0 +1,9 @@
+$ node diff.mjs shots/before shots/A   (unit A vs main)
+1280-collapsed.png	1280x800	exact-diff-px=0	perceptual-diff-px=0
+1280-what.png	1280x4879	exact-diff-px=0	perceptual-diff-px=0
+1280-who.png	1280x1346	exact-diff-px=0	perceptual-diff-px=0
+1280-why.png	1280x1026	exact-diff-px=0	perceptual-diff-px=0
+390-collapsed.png	390x962	exact-diff-px=0	perceptual-diff-px=0
+390-what.png	390x6509	exact-diff-px=0	perceptual-diff-px=0
+390-who.png	390x1810	exact-diff-px=0	perceptual-diff-px=0
+390-why.png	390x1330	exact-diff-px=0	perceptual-diff-px=0

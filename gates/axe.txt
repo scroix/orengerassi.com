@@ -1,0 +1,34 @@
+== before
+390-collapsed	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+390-collapsed	serious	html-has-lang	html
+390-who	serious	color-contrast	#red-toggle (2.98:1 #fafafa on #db7093, 12.0pt (16px) bold)
+390-who	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+390-who	serious	html-has-lang	html
+390-what	serious	color-contrast	#green-toggle (3.97:1 #fafafa on #008b8b, 12.0pt (16px) bold)
+390-what	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+390-what	serious	html-has-lang	html
+390-why	serious	color-contrast	#blue-content > h3 (2.06:1 #483d8b on #121212, 14.0pt (18.72px) bold)
+390-why	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+390-why	serious	html-has-lang	html
+1280-collapsed	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+1280-collapsed	serious	html-has-lang	html
+1280-who	serious	color-contrast	#red-toggle (2.98:1 #fafafa on #db7093, 19.2pt (25.6px) bold)
+1280-who	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+1280-who	serious	html-has-lang	html
+1280-what	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+1280-what	serious	html-has-lang	html
+1280-why	serious	color-contrast	#blue-content > h3 (2.06:1 #483d8b on #121212, 14.0pt (18.72px) bold)
+1280-why	moderate	heading-order	#red-content > h3 | h6 | h4:nth-child(17) | h4:nth-child(19)
+1280-why	serious	html-has-lang	html
+serious+critical violations: 13
+
+== after
+390-collapsed	clean (axe 4.14.0)
+390-who	clean (axe 4.14.0)
+390-what	clean (axe 4.14.0)
+390-why	clean (axe 4.14.0)
+1280-collapsed	clean (axe 4.14.0)
+1280-who	clean (axe 4.14.0)
+1280-what	clean (axe 4.14.0)
+1280-why	clean (axe 4.14.0)
+serious+critical violations: 0

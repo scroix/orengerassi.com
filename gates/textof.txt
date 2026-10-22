@@ -1,0 +1,2 @@
+$ python3 -I textof.py < index.html | diff - current-index.txt
+(no output: no line changed)

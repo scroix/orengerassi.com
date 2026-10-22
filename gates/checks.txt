@@ -1,0 +1,27 @@
+$ node checks.mjs <after> <before> <worktree>
+PASS lang=en
+PASS canonical=https://orengerassi.com/
+PASS og:type=website
+PASS og:url=https://orengerassi.com/
+PASS og:title=Oren Gerassi
+PASS og:image=https://orengerassi.com/preview.png
+PASS og:image:width=1200
+PASS og:image:height=630
+PASS og:image:alt=Line drawing of Oren Gerassi
+PASS twitter:card=summary_large_image
+PASS og:description matches meta description: "Oren Gerassi - Information for Prospective Collaborators, Employers, Lovers and Stalkers."
+PASS no executable scripts (0)
+PASS one JSON-LD block (1)
+PASS JSON-LD keys @context,@type,name,url,sameAs
+PASS JSON-LD values {"@context":"https://schema.org","@type":"Person","name":"Oren Gerassi","url":"https://orengerassi.com/","sameAs":["https://borcho.com/"]}
+PASS heading outline 122344444444444344433234332
+PASS svg {"role":"img","label":"Line drawing of Oren Gerassi"}
+PASS footer links ["https://www.slt.org.au/","https://borcho.com/","mailto:oren.gerassi@gmail.com"]
+PASS details=3 inputs=0
+PASS no third-party requests in markup []
+PASS preview.png 1200x630, 25697 bytes
+PASS reduced motion: animations on load [], on open [], ::details-content max-height 100ms after open 15000px
+PASS full motion: on load ["fadein","DASH3"], ::details-content max-height 100ms after open 367.401px (mid-slide)
+PASS portrait path count 14 -> 14
+INFO portrait max bbox edge shift 0.141 viewBox units; max path length change 0.209%; path data 62207 -> 38654 bytes (pixel diff is the pass criterion)
+ALL PASS

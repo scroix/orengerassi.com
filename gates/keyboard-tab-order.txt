@@ -1,0 +1,13 @@
+== before
+a "Not-for-profit organisation an" visible 35px
+a "Musings (borcho.com)" visible 67px
+a "Contact" visible 61px
+first tab stop on main: https://www.slt.org.au/ inside a collapsed container, clientHeight=0px, overflow=hidden
+
+== after
+summary "Who?" visible 74px
+summary "What?" visible 74px
+summary "Why?" visible 74px
+a "Musings (borcho.com)" visible 70px
+a "Contact" visible 64px
+Enter on first summary -> open = true

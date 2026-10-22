@@ -1,0 +1,5 @@
+before mobile  perf 94 a11y 87 bp 100 seo 100 FCP 1.9 s LCP 2.9 s CLS 0.001 render-blocking: Est savings of 1,160 ms
+before desktop perf 97 a11y 87 bp 100 seo 100 FCP 0.8 s LCP 1.1 s CLS 0 render-blocking: Est savings of 630 ms
+after  mobile  perf 100 a11y 100 bp 100 seo 100 FCP 1.1 s LCP 1.2 s CLS 0 render-blocking: None
+after  desktop perf 100 a11y 100 bp 100 seo 100 FCP 0.3 s LCP 0.3 s CLS 0 render-blocking: None
+Lighthouse 13.5.0, simulated throttling, median of 5 runs per row. Before, mobile performance ran 88, 94, 94, 94, 93 (run 1 was slower, probably a cold connection to Google Fonts) and desktop ran 97 five times. After, every run scored 100 in every category.
