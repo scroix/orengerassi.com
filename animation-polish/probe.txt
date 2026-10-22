@@ -1,0 +1,11 @@
+== main
+chrome  Who? open: 90px to 792px, first visible move 26ms, settled 126ms, button heights 74px | close: 792px to 90px, first visible move 637ms, settled 737ms, button heights 74px
+webkit  Who? open: 90px to 792px, first visible move 73ms, settled 170ms, button heights 74px | close: 792px to 90px, first visible move 1ms, settled 1ms, button heights 74px
+firefox Who? open: 91px to 843px, first visible move 16ms, settled 132ms, button heights 75px | close: 843px to 91px, first visible move 638ms, settled 746ms, button heights 75px
+== animation-polish
+chrome  Who? open: 90px to 792px, first visible move 40ms, settled 258ms, button heights 74px | close: 792px to 90px, first visible move 7ms, settled 157ms, button heights 74px
+webkit  Who? open: 90px to 792px, first visible move 70ms, settled 287ms, button heights 74px | close: 792px to 90px, first visible move 1ms, settled 1ms, button heights 74px
+firefox Who? open: 91px to 843px, first visible move 15ms, settled 232ms, button heights 75px | close: 843px to 91px, first visible move 21ms, settled 153ms, button heights 75px
+== phone tap-close, main then branch
+after tap-open then tap-close: open=false background=rgb(219, 112, 147) hover=true
+after tap-open then tap-close: open=false background=rgba(0, 0, 0, 0) hover=true
